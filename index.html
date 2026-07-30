@@ -91,16 +91,27 @@
   
   b{font-weight:700;}
 
-/* 图片全屏灯箱 */
+/* 图片全屏灯箱 WeChat兼容 */
+figure.frame-img.lb-trigger{
+  -webkit-tap-highlight-color:rgba(255,255,255,.15);
+  cursor:pointer;
+}
+.lb-trigger img{
+  pointer-events:none!important;
+  -webkit-touch-callout:none!important;
+  -webkit-user-select:none!important;
+  user-select:none!important;
+}
 #lb-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);
   display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;
-  transition:opacity .35s ease;cursor:zoom-out}
+  transition:opacity .35s ease}
 #lb-overlay.open{opacity:1;pointer-events:auto}
 #lb-overlay img{max-width:92vw;max-height:92vh;object-fit:contain;
-  transform:scale(.9);transition:transform .35s ease;box-shadow:0 0 60px rgba(0,0,0,.5)}
+  transform:scale(.9);transition:transform .35s ease;box-shadow:0 0 60px rgba(0,0,0,.5);
+  pointer-events:auto!important}
 #lb-overlay.open img{transform:scale(1)}
 #lb-close{position:fixed;top:2vh;right:2vw;z-index:10001;
-  width:40px;height:40px;cursor:pointer;opacity:.65;transition:opacity .25s;
+  width:44px;height:44px;cursor:pointer;opacity:.65;transition:opacity .25s;
   background:none;border:0;padding:0}
 #lb-close:hover{opacity:1}
 #lb-close::before,#lb-close::after{content:"";position:absolute;top:50%;left:50%;
@@ -109,9 +120,8 @@
 #lb-close::after {transform:translate(-50%,-50%) rotate(-45deg)}
 #lb-caption{position:fixed;bottom:3vh;left:50%;transform:translateX(-50%);z-index:10001;
   color:rgba(255,255,255,.7);font-family:var(--sans-zh);font-size:max(13px,3.5vw);
-  text-align:center;opacity:0;transition:opacity .35s ease}
+  text-align:center;opacity:0;transition:opacity .35s ease;pointer-events:none}
 #lb-overlay.open ~ #lb-caption{opacity:1}
-.lb-trigger{cursor:zoom-in!important}
 </style>
 </head>
 <body>
@@ -120,22 +130,22 @@
 <h2>目录</h2>
 <a href="#s01">01 · 封面</a>
 <a href="#s02">02 · 目录</a>
-<a href="#s02">03 · 考察背景与主题</a>
-<a href="#s03">04 · 行程总览 · 路线图</a>
-<a href="#s04">05 · 第二幕 · 吴昌硕纪念馆</a>
-<a href="#s05">06 · 建筑档案 · 百年老宅</a>
-<a href="#s06">07 · 空间与细节 · 图片展示</a>
-<a href="#s07">08 · 第一幕 · 浦东美术馆</a>
-<a href="#s08">09 · 建筑档案 · 光的圣殿</a>
-<a href="#s09">10 · 空间影像 · 图片展示</a>
-<a href="#s10">11 · 晚间滨江散步</a>
-<a href="#s11">12 · 沿途看点</a>
-<a href="#s12">13 · 第三幕 · 上海船厂1862</a>
-<a href="#s13">14 · 建筑档案 · 工业重生</a>
-<a href="#s14">15 · 空间与结构 · 图片展示</a>
-<a href="#s15">16 · 更多空间 · 图片展示</a>
-<a href="#s16">17 · 三个考察点 · 对比总结</a>
-<a href="#s17">18 · 团建任务 · 结语</a>
+<a href="#s03">03 · 考察背景与主题</a>
+<a href="#s04">04 · 行程总览 · 路线图</a>
+<a href="#s05">05 · 第一幕 · 吴昌硕纪念馆</a>
+<a href="#s06">06 · 建筑档案 · 百年老宅</a>
+<a href="#s07">07 · 空间与细节 · 图片展示</a>
+<a href="#s08">08 · 第二幕 · 浦东美术馆</a>
+<a href="#s09">09 · 建筑档案 · 光的圣殿</a>
+<a href="#s10">10 · 空间影像 · 图片展示</a>
+<a href="#s11">11 · 晚间滨江散步</a>
+<a href="#s12">12 · 沿途看点</a>
+<a href="#s13">13 · 第三幕 · 上海船厂1862</a>
+<a href="#s14">14 · 建筑档案 · 工业重生</a>
+<a href="#s15">15 · 空间与结构 · 图片展示</a>
+<a href="#s16">16 · 更多空间 · 图片展示</a>
+<a href="#s17">17 · 三个考察点 · 对比总结</a>
+<a href="#s18">18 · 团建任务 · 结语</a>
 </div>
 <div class="slide dark hero" id="s01">
 <div class="section-hero center">
@@ -145,25 +155,41 @@
 <p class="lead" style="max-width:80vw">从百年老宅到当代地标，再到工业遗产——一次穿越三个时代的晚间滨江散步</p>
 <div class="meta-row"><span>历保事业部</span><span>·</span><span>2026.08.04</span><span>·</span><span>上海浦东</span></div>
 </div>
-<div class="foot">浦东美术馆 → 吴昌硕纪念馆 → 上海船厂1862<br>— 2026 —</div>
+<div class="foot">吴昌硕纪念馆 → 浦东美术馆 → 上海船厂1862<br>— 2026 —</div>
 </div>
 <div class="slide light" id="s02">
-<div class="chrome"><span>Route · 行程总览</span><span>03 / 17</span></div>
-<div class="kicker mt-2">半天 · 9人（3组×3人）</div>
+<div class="chrome"><span>Contents · 目录</span><span>02 / 18</span></div>
+<div class="kicker mt-2">Overview</div>
+<h2 class="h-xl">目 录</h2>
+<div class="col gap-1 mt-3">
+<div style="font-size:3.2vw;line-height:2.4"><span class="meta">01</span> 考察背景与主题</div>
+<div style="font-size:3.2vw;line-height:2.4"><span class="meta">02</span> 行程总览 · 路线图</div>
+<div style="font-size:3.2vw;line-height:2.4"><span class="meta">03</span> 考察点① 浦东美术馆</div>
+<div style="font-size:3.2vw;line-height:2.4"><span class="meta">04</span> 考察点② 吴昌硕纪念馆</div>
+<div style="font-size:3.2vw;line-height:2.4"><span class="meta">05</span> 晚间滨江散步 · 美术馆→船厂</div>
+<div style="font-size:3.2vw;line-height:2.4"><span class="meta">06</span> 晚间滨江散步</div>
+<div style="font-size:3.2vw;line-height:2.4"><span class="meta">07</span> 晚间滨江散步</div>
+</div>
+<div class="foot">Contents · 目录 &nbsp;|&nbsp; Page 02</div>
+</div>
+<div class="slide light" id="s03">
+<div class="chrome"><span>Route · 行程总览</span><span>03 / 18</span></div>
+<div class="kicker mt-2">周二 · 9人（3组×3人）</div>
 <h2 class="h-xl">行程总览</h2>
 <figure class="frame-img lb-trigger mt-3"><img src="images/img_01.png" alt="路线示意图"></figure>
 <div class="col gap-1 mt-3">
 <div><span class="meta">13:00</span> <span class="body-zh">9号线桂林路站→世纪大道→陆家嘴站</span></div>
-<div<div><span class="meta">14:30</span> <span class="body-zh">浦东美术馆 · 120min</span></div>
+<div><span class="meta">14:30</span> <span class="body-zh">浦东美术馆 · 120min</span></div>
 <div><span class="meta">16:40</span> <span class="body-zh">吴昌硕纪念馆（百年老宅）· 50min</span></div>
+<div><span class="meta">17:00</span> <span class="body-zh">🚶 晚间滨江散步 2.5km · 40min</span></div>
 <div><span class="meta">17:40</span> <span class="body-zh">上海船厂1862 · 50min</span></div>
-<div><span class="meta">18:30</span> <span class="body-zh">聚餐 · 60min</span></div>
-<div><span class="meta">19:40</span> <span class="body-zh">晚间滨江散步 · 20:20返程</span></div>
+<div><span class="meta">18:35</span> <span class="body-zh">🍽 聚餐 · 20:20返程</span></div>
 </div>
-Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
+
+<div class="foot">Route · 行程总览 &nbsp;|&nbsp; 周二 13:00 — 20:20</div>
 </div>
-<div class="slide dark" id="s03">
-<div class="chrome"><span>Background · 考察背景</span><span>04 / 17</span></div>
+<div class="slide dark" id="s04">
+<div class="chrome"><span>Background · 考察背景</span><span>04 / 18</span></div>
 <div class="kicker mt-2">Why This Trip</div>
 <h2 class="h-xl">建筑与历史对话<br>的三种方式</h2>
 <p class="lead mt-2">陆家嘴浓缩了从传统民居到现代金融中心、再到工业遗产再生的完整谱系。恰逢浦东美术馆"让·努维尔"个展，为团队提供近距离接触国际大师建筑理念的机会。</p>
@@ -175,18 +201,18 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <div class="callout"><span class="q-big">每一代建筑如何回应自己的时代？我们如何在工作中处理"历史与创新"的关系？</span></div>
 <div class="foot">Background · 考察背景与主题 &nbsp;|&nbsp; Page 04</div>
 </div>
-<div class="slide dark hero" id="s04">
+<div class="slide dark hero" id="s05">
 <div class="section-hero center">
-<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>第一幕 · 幸存</span><span>05 / 17</span></div>
+<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>第二幕 · 幸存</span><span>05 / 18</span></div>
 <div class="kicker">Act I</div>
 <h1 class="h-hero" style="font-size:10vw">吴昌硕纪念馆</h1>
-<p class="lead mt-2">幸存——被摩天楼包围的百年老宅。<br>1914年 · 传统工匠宅 · 陆家嘴东路15号</p>
+<p class="lead mt-2">幸存——被摩天楼包围的百年老宅。<br>1914年 · 陈桂春宅 · 陆家嘴东路15号</p>
 </div>
 <div class="foot">上海仅存的陆家嘴百年老宅 · 优秀历史建筑</div>
 </div>
-<div class="slide light" id="s05">
-<div class="chrome"><span>吴昌硕纪念馆 · 档案</span><span>06 / 17</span></div>
-<div class="kicker mt-2">原名传统工匠宅 · 中西合璧式石库门</div>
+<div class="slide light" id="s06">
+<div class="chrome"><span>吴昌硕纪念馆 · 档案</span><span>06 / 18</span></div>
+<div class="kicker mt-2">原名陈桂春宅 · 中西合璧式石库门</div>
 <h2 class="h-xl">百年老宅</h2>
 <p class="lead mt-2">陆家嘴仅存的百年老宅。2003年因金融城建设整体平移50米至现址，为城市更新中保护历史建筑的经典案例。</p>
 <figure class="frame-img lb-trigger mt-3"><img src="images/img_01.jpg" alt="老宅与摩天楼同框"><figcaption class="img-cap">老宅与摩天楼同框</figcaption></figure>
@@ -198,8 +224,8 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <div class="callout">站在老宅庭院中，抬头即是上海中心 · 金茂大厦 · 环球金融中心。<div class="cite">— 新旧对视</div></div>
 <div class="foot">Page 06 · 吴昌硕纪念馆 / 建筑档案</div>
 </div>
-<div class="slide dark" id="s06">
-<div class="chrome"><span>空间与细节</span><span>07 / 17</span></div>
+<div class="slide dark" id="s07">
+<div class="chrome"><span>空间与细节</span><span>07 / 18</span></div>
 <div class="kicker mt-2">Gallery · 建筑空间</div>
 <h2 class="h-xl">中西合璧 · 百年细节</h2>
 <div class="img-grid mt-3">
@@ -210,17 +236,17 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <p class="note">砖雕门楼 · 彩色玻璃 · 西式拱券与中式纹样——海派文化"海纳百川"的早期基因</p>
 <div class="foot">Page 07 · 图片展示</div>
 </div>
-<div class="slide light hero" id="s07">
+<div class="slide light hero" id="s08">
 <div class="section-hero center">
-<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>第二幕 · 框景</span><span>08 / 17</span></div>
+<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>第二幕 · 框景</span><span>08 / 18</span></div>
 <div class="kicker">Act II</div>
 <h1 class="h-hero" style="font-size:10vw">浦东美术馆</h1>
 <p class="lead mt-2">框景——纯净容器，将历史作为景观纳入。<br>2021年 · 让·努维尔 · 滨江大道2777号</p>
 </div>
 <div class="foot">2008年普利兹克奖得主 · "建筑属于它的场所与时间"</div>
 </div>
-<div class="slide dark" id="s08">
-<div class="chrome"><span>浦东美术馆 · 档案</span><span>09 / 17</span></div>
+<div class="slide dark" id="s09">
+<div class="chrome"><span>浦东美术馆 · 档案</span><span>09 / 18</span></div>
 <div class="kicker mt-2">让·努维尔 Jean Nouvel · 法国建筑大师</div>
 <h2 class="h-xl">光的圣殿</h2>
 <p class="lead mt-2">占地1.3万㎡，建筑面积4万㎡。核心设计理念："建筑属于它的场所与时间"。</p>
@@ -233,8 +259,8 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <div class="callout">努维尔个展：在自己的建筑里办回顾展。<br>展期 2026.06.27 → 08.31<div class="cite">— "在我脑中，在我眼中……归属……"</div></div>
 <div class="foot">Page 09 · 浦东美术馆 / 建筑档案</div>
 </div>
-<div class="slide light" id="s09">
-<div class="chrome"><span>建筑空间</span><span>10 / 17</span></div>
+<div class="slide light" id="s10">
+<div class="chrome"><span>建筑空间</span><span>10 / 18</span></div>
 <div class="kicker mt-2">Gallery · 空间影像</div>
 <h2 class="h-xl">镜厅 · 露台 · 光影</h2>
 <div class="img-grid mt-3">
@@ -245,17 +271,17 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <p class="note">白色混凝土 · 玻璃 · 金属——体量纯净，光线在不同时分在建筑内部流动。</p>
 <div class="foot">Page 10 · 图片展示</div>
 </div>
-<div class="slide dark hero" id="s10">
+<div class="slide dark hero" id="s11">
 <div class="section-hero center">
-<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>Interlude</span><span>11 / 17</span></div>
+<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>Interlude</span><span>11 / 18</span></div>
 <div class="kicker">19:40 — 20:20</div>
 <h1 class="h-hero" style="font-size:9vw">晚间滨江散步</h1>
 <p class="lead mt-2">浦东美术馆 → 上海船厂1862<br>全程 2.5km · 沿江步道</p>
 </div>
-<div class="foot">晚餐后的休闲时光 · 华灯初上的黄浦江</div>
+<div class="foot">将交通转化为体验 · 黄昏时分的黄浦江</div>
 </div>
-<div class="slide light" id="s11">
-<div class="chrome"><span>沿途看点</span><span>12 / 17</span></div>
+<div class="slide light" id="s12">
+<div class="chrome"><span>沿途看点</span><span>12 / 18</span></div>
 <div class="kicker mt-2">从美术馆到船厂 · 2.5km</div>
 <h2 class="h-xl">徒步路线</h2>
 <div class="col gap-1 mt-3">
@@ -267,17 +293,17 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 </div>
 <div class="foot">Page 12 · 晚间滨江散步</div>
 </div>
-<div class="slide light hero" id="s12">
+<div class="slide light hero" id="s13">
 <div class="section-hero center">
-<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>第三幕 · 再生</span><span>13 / 17</span></div>
+<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>第三幕 · 再生</span><span>13 / 18</span></div>
 <div class="kicker">Act III</div>
 <h1 class="h-hero" style="font-size:9vw">上海船厂 1862</h1>
 <p class="lead mt-2">再生——保留工业结构，植入当代功能。<br>1862年始建 · 隈研吾改造 · 滨江大道即墨路</p>
 </div>
 <div class="foot">中国近代造船工业发源地 · 2011-2020 改造</div>
 </div>
-<div class="slide dark" id="s13">
-<div class="chrome"><span>上海船厂1862 · 档案</span><span>14 / 17</span></div>
+<div class="slide dark" id="s14">
+<div class="chrome"><span>上海船厂1862 · 档案</span><span>14 / 18</span></div>
 <div class="kicker mt-2">隈研吾 Kengo Kuma · "负建筑"理念</div>
 <h2 class="h-xl">工业重生</h2>
 <p class="lead mt-2">原上海船厂造机车间，清同治元年始建。隈研吾耗时9年，将中国近代最早工业建筑改造为商业综合体。</p>
@@ -290,8 +316,8 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <div class="callout" style="font-size:2.8vw">"不是推倒重来，而是在时间层叠中找到新空间。"</div>
 <div class="foot">Page 14 · 建筑档案</div>
 </div>
-<div class="slide light" id="s14">
-<div class="chrome"><span>空间与结构</span><span>15 / 17</span></div>
+<div class="slide light" id="s15">
+<div class="chrome"><span>空间与结构</span><span>15 / 18</span></div>
 <div class="kicker mt-2">Gallery · 新旧交织</div>
 <h2 class="h-xl">工业遗迹 · 当代空间</h2>
 <div class="img-grid mt-3">
@@ -302,8 +328,8 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <p class="note">红砖 · 钢架 · 玻璃——保留的工业结构与当代材料形成"新旧交织"</p>
 <div class="foot">Page 15 · 图片展示</div>
 </div>
-<div class="slide dark" id="s15">
-<div class="chrome"><span>更多空间</span><span>16 / 17</span></div>
+<div class="slide dark" id="s16">
+<div class="chrome"><span>更多空间</span><span>16 / 18</span></div>
 <div class="kicker mt-2">Gallery · 四大看点</div>
 <h2 class="h-xl">剧场 · 船坞 · 商业</h2>
 <div class="img-grid mt-3">
@@ -314,8 +340,8 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <p class="note">原车间改造的800座剧场 · 保留的干船坞 · 各楼层室内设计如何与工业空间对话</p>
 <div class="foot">Page 16 · 更多空间</div>
 </div>
-<div class="slide light" id="s16">
-<div class="chrome"><span>Summary · 对比</span><span>17 / 17</span></div>
+<div class="slide light" id="s17">
+<div class="chrome"><span>Summary · 对比</span><span>17 / 18</span></div>
 <div class="kicker mt-2">Core Comparison</div>
 <h2 class="h-xl">三个考察点 · 核心对比</h2>
 <div class="cmp-table mt-3">
@@ -323,20 +349,20 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <div class="lbl">年代</div><div class="val">1914</div><div class="val">2021</div><div class="val">1862/2020</div>
 <div class="lbl">类型</div><div class="val">传统民居</div><div class="val">当代美术馆</div><div class="val">工业厂房</div>
 <div class="lbl">方式</div><div class="val">幸存·被包围</div><div class="val">框景·容器</div><div class="val">再生·植入</div>
-<div class="lbl">建筑师</div><div class="val">传统工匠</div><div class="val">让·努维尔</div><div class="val">隈研吾</div>
+<div class="lbl">建筑师</div><div class="val">陈桂春</div><div class="val">让·努维尔</div><div class="val">隈研吾</div>
 <div class="lbl">材料</div><div class="val">砖木·青瓦</div><div class="val">白混凝土</div><div class="val">红砖·钢架</div>
 <div class="lbl">感受</div><div class="val">亲切·内省</div><div class="val">开阔·通透</div><div class="val">高大·粗犷</div>
 </div>
 <div class="callout mt-3"><span class="q-big">核心线索：</span>三种"历史对话"的答案——从被动幸存，到主动框景，再到有机再生</div>
 <div class="foot">Page 17 · 对比总结</div>
 </div>
-<div class="slide dark hero" id="s17">
+<div class="slide dark hero" id="s18">
 <div class="section-hero center">
-<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>Closing</span><span>18 / 17</span></div>
+<div class="chrome" style="position:absolute;top:14vw;left:6vw;right:6vw"><span>Closing</span><span>18 / 18</span></div>
 <div class="kicker">Tasks &amp; Notes</div>
 <h1 class="h-hero" style="font-size:7vw;line-height:1.12">建筑是时间的容器</h1>
 <p class="lead mt-2">每一代人都在上面留下自己的印记。</p>
-<div class="meta-row" style="justify-content:center"> 舒适便鞋 · 全程约1.2万步 &nbsp;|&nbsp;  雨天改打车约20分钟</div>
+<div class="meta-row" style="justify-content:center">👟 舒适便鞋 · 全程约1.2万步 &nbsp;|&nbsp; ☔ 雨天改打车约20分钟</div>
 <div class="col gap-1 mt-3" style="width:100%;max-width:90vw">
 <div class="stat-card"><div class="stat-label">考察点 ①</div><div class="stat-note">拍一张老宅与摩天楼同框的"新旧对话"照片</div></div>
 <div class="stat-card"><div class="stat-label">考察点 ②</div><div class="stat-note">记录3个让·努维尔回应历史的设计手法</div></div>
@@ -380,30 +406,54 @@ Route · 行程总览 &nbsp;|&nbsp; 13:00 — 20:20</div>
 <script>
 (function(){
   var overlay = document.getElementById('lb-overlay');
-  var img = document.getElementById('lb-img');
-  var close = document.getElementById('lb-close');
+  var lbImg = document.getElementById('lb-img');
+  var closeBtn = document.getElementById('lb-close');
   var cap = document.getElementById('lb-caption');
   var isOpen = false;
 
   function open(src, alt){
-    img.src = src; img.alt = alt || '';
+    lbImg.src = src;
+    lbImg.alt = alt || '';
     cap.textContent = alt || '';
-    overlay.classList.add('open'); isOpen = true;
-  }
-  function shut(){
-    overlay.classList.remove('open'); isOpen = false;
-    setTimeout(function(){ img.src = ''; cap.textContent = ''; }, 400);
+    overlay.classList.add('open');
+    isOpen = true;
+    document.body.style.overflow = 'hidden';
   }
 
-  document.addEventListener('click', function(e){
-    var trigger = e.target.closest('.lb-trigger');
-    if(trigger){
-      var el = trigger.querySelector('img');
-      if(el && el.src){ open(el.src, el.alt); return; }
+  function shut(){
+    overlay.classList.remove('open');
+    isOpen = false;
+    document.body.style.overflow = '';
+    setTimeout(function(){ lbImg.src = ''; cap.textContent = ''; }, 400);
+  }
+
+  // Unified handler for both click and touchend
+  function handleTrigger(e){
+    var el = e.target.closest('.lb-trigger');
+    if(!el) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var img = el.querySelector('img');
+    if(img && img.src){ open(img.src, img.alt); }
+  }
+
+  // Use both events for mobile + desktop compatibility
+  document.addEventListener('click', handleTrigger, {passive: false, capture: true});
+  document.addEventListener('touchend', handleTrigger, {passive: false, capture: true});
+
+  // Close: tap overlay or close button
+  function handleClose(e){
+    if(!isOpen) return;
+    if(e.target === overlay || e.target === closeBtn
+       || (closeBtn.contains && closeBtn.contains(e.target))
+       || e.target === closeBtn.firstChild){
+      e.preventDefault();
+      shut();
     }
-    if(isOpen && (e.target === overlay || e.target === close
-       || e.target === close.firstChild)){ shut(); }
-  });
+  }
+
+  document.addEventListener('click', handleClose);
+  document.addEventListener('touchend', handleClose);
 
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape' && isOpen) shut();
