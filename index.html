@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>时间折叠——陆家嘴的建筑对话 · 手机版</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,29 +90,6 @@
   .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid;opacity:.75;}
   
   b{font-weight:700;}
-
-.lb-trigger{-webkit-tap-highlight-color:rgba(255,255,255,.15);cursor:pointer}
-.lb-trigger img{pointer-events:none!important;-webkit-touch-callout:none!important;
-  -webkit-user-select:none!important;user-select:none!important;touch-action:none}
-#lb-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);
-  display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;
-  transition:opacity .35s ease}
-#lb-overlay.open{opacity:1;pointer-events:auto}
-#lb-overlay img{max-width:92vw;max-height:92vh;object-fit:contain;
-  transform:scale(.9);transition:transform .35s ease;box-shadow:0 0 60px rgba(0,0,0,.5)}
-#lb-overlay.open img{transform:scale(1)}
-#lb-close{position:fixed;top:2vh;right:2vw;z-index:10001;
-  width:44px;height:44px;cursor:pointer;opacity:.65;transition:opacity .25s;
-  background:none;border:0;padding:0}
-#lb-close:hover{opacity:1}
-#lb-close::before,#lb-close::after{content:"";position:absolute;top:50%;left:50%;
-  width:24px;height:1.5px;background:#fff}
-#lb-close::before{transform:translate(-50%,-50%) rotate(45deg)}
-#lb-close::after {transform:translate(-50%,-50%) rotate(-45deg)}
-#lb-caption{position:fixed;bottom:3vh;left:50%;transform:translateX(-50%);z-index:10001;
-  color:rgba(255,255,255,.7);font-family:var(--sans-zh);font-size:max(13px,3.5vw);
-  text-align:center;opacity:0;transition:opacity .35s ease;pointer-events:none}
-#lb-overlay.open ~ #lb-caption{opacity:1}
 </style>
 </head>
 <body>
@@ -167,7 +144,7 @@
 <div class="chrome"><span>Route · 行程总览</span><span>03 / 18</span></div>
 <div class="kicker mt-2">周二 · 9人（3组×3人）</div>
 <h2 class="h-xl">行程总览</h2>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)" mt-3"><img src="images/img_01.png" alt="路线示意图"></figure>
+<figure class="frame-img" mt-3"><img src="images/img_01.png" alt="路线示意图"></figure>
 <div class="col gap-1 mt-3">
 <div><span class="meta">13:00</span> <span class="body-zh">9号线桂林路站→世纪大道→陆家嘴站</span></div>
 <div><span class="meta">14:30</span> <span class="body-zh">浦东美术馆 · 120min</span></div>
@@ -206,7 +183,7 @@
 <div class="kicker mt-2">原名传统工匠宅 · 中西合璧式石库门</div>
 <h2 class="h-xl">百年老宅</h2>
 <p class="lead mt-2">陆家嘴仅存的百年老宅。2003年因金融城建设整体平移50米至现址，为城市更新中保护历史建筑的经典案例。</p>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)" mt-3"><img src="images/img_01.jpg" alt="老宅与摩天楼同框"><figcaption class="img-cap">老宅与摩天楼同框</figcaption></figure>
+<figure class="frame-img" mt-3"><img src="images/img_01.jpg" alt="老宅与摩天楼同框"><figcaption class="img-cap">老宅与摩天楼同框</figcaption></figure>
 <div class="col gap-1 mt-3">
 <div class="rowline"><span class="k">结构</span><span class="v">砖木混合，硬山式屋顶，小青瓦</span></div>
 <div class="rowline"><span class="k">装饰</span><span class="v">西式花卉 + 中式吉祥图案</span></div>
@@ -220,9 +197,9 @@
 <div class="kicker mt-2">Gallery · 建筑空间</div>
 <h2 class="h-xl">中西合璧 · 百年细节</h2>
 <div class="img-grid mt-3">
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_02.jpg" alt="大门立面"><figcaption class="img-cap">大门立面</figcaption></figure>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_03.jpg" alt="内部庭院"><figcaption class="img-cap">内部庭院空间</figcaption></figure>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_04.jpg" alt="装饰细节"><figcaption class="img-cap">中西合璧装饰细节</figcaption></figure>
+<figure class="frame-img""><img src="images/img_02.jpg" alt="大门立面"><figcaption class="img-cap">大门立面</figcaption></figure>
+<figure class="frame-img""><img src="images/img_03.jpg" alt="内部庭院"><figcaption class="img-cap">内部庭院空间</figcaption></figure>
+<figure class="frame-img""><img src="images/img_04.jpg" alt="装饰细节"><figcaption class="img-cap">中西合璧装饰细节</figcaption></figure>
 </div>
 <p class="note">砖雕门楼 · 彩色玻璃 · 西式拱券与中式纹样——海派文化"海纳百川"的早期基因</p>
 <div class="foot">Page 07 · 图片展示</div>
@@ -241,7 +218,7 @@
 <div class="kicker mt-2">让·努维尔 Jean Nouvel · 法国建筑大师</div>
 <h2 class="h-xl">光的圣殿</h2>
 <p class="lead mt-2">占地1.3万㎡，建筑面积4万㎡。核心设计理念："建筑属于它的场所与时间"。</p>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)" mt-3"><img src="images/img_05.jpg" alt="让·努维尔个展"><figcaption class="img-cap">让·努维尔个展 · 海报</figcaption></figure>
+<figure class="frame-img" mt-3"><img src="images/img_05.jpg" alt="让·努维尔个展"><figcaption class="img-cap">让·努维尔个展 · 海报</figcaption></figure>
 <div class="col gap-1 mt-3">
 <div class="rowline"><span class="k">镜厅</span><span class="v">二层巨型玻璃幕墙 55m×12m</span><span class="m">框景</span></div>
 <div class="rowline"><span class="k">露台</span><span class="v">360°看陆家嘴、外滩、黄浦江</span><span class="m">全景</span></div>
@@ -255,9 +232,9 @@
 <div class="kicker mt-2">Gallery · 空间影像</div>
 <h2 class="h-xl">镜厅 · 露台 · 光影</h2>
 <div class="img-grid mt-3">
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_06.jpg" alt="镜厅"><figcaption class="img-cap">镜厅 · 框景外滩</figcaption></figure>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_07.jpg" alt="中央展厅"><figcaption class="img-cap">中央展厅 · 光的圣殿</figcaption></figure>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_08.jpg" alt="顶层露台"><figcaption class="img-cap">顶层露台 · 城市全景</figcaption></figure>
+<figure class="frame-img""><img src="images/img_06.jpg" alt="镜厅"><figcaption class="img-cap">镜厅 · 框景外滩</figcaption></figure>
+<figure class="frame-img""><img src="images/img_07.jpg" alt="中央展厅"><figcaption class="img-cap">中央展厅 · 光的圣殿</figcaption></figure>
+<figure class="frame-img""><img src="images/img_08.jpg" alt="顶层露台"><figcaption class="img-cap">顶层露台 · 城市全景</figcaption></figure>
 </div>
 <p class="note">白色混凝土 · 玻璃 · 金属——体量纯净，光线在不同时分在建筑内部流动。</p>
 <div class="foot">Page 10 · 图片展示</div>
@@ -298,7 +275,7 @@
 <div class="kicker mt-2">隈研吾 Kengo Kuma · "负建筑"理念</div>
 <h2 class="h-xl">工业重生</h2>
 <p class="lead mt-2">原上海船厂造机车间，清同治元年始建。隈研吾耗时9年，将中国近代最早工业建筑改造为商业综合体。</p>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)" mt-3"><img src="images/img_09.jpg" alt="船厂全景"><figcaption class="img-cap">上海船厂1862 · 全景</figcaption></figure>
+<figure class="frame-img" mt-3"><img src="images/img_09.jpg" alt="船厂全景"><figcaption class="img-cap">上海船厂1862 · 全景</figcaption></figure>
 <div class="col gap-1 mt-3">
 <div class="rowline"><span class="k">结构</span><span class="v">保留排架、屋顶桁架、红砖墙</span><span class="m">记忆</span></div>
 <div class="rowline"><span class="k">材料</span><span class="v">砖+混凝土柱，植入玻璃·钢·木</span><span class="m">交织</span></div>
@@ -312,9 +289,9 @@
 <div class="kicker mt-2">Gallery · 新旧交织</div>
 <h2 class="h-xl">工业遗迹 · 当代空间</h2>
 <div class="img-grid mt-3">
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_10.jpg" alt="排架结构"><figcaption class="img-cap">保留的排架结构</figcaption></figure>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_11.jpg" alt="新旧并置"><figcaption class="img-cap">新旧材料的并置</figcaption></figure>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_12.jpg" alt="细节"><figcaption class="img-cap">工业结构细节</figcaption></figure>
+<figure class="frame-img""><img src="images/img_10.jpg" alt="排架结构"><figcaption class="img-cap">保留的排架结构</figcaption></figure>
+<figure class="frame-img""><img src="images/img_11.jpg" alt="新旧并置"><figcaption class="img-cap">新旧材料的并置</figcaption></figure>
+<figure class="frame-img""><img src="images/img_12.jpg" alt="细节"><figcaption class="img-cap">工业结构细节</figcaption></figure>
 </div>
 <p class="note">红砖 · 钢架 · 玻璃——保留的工业结构与当代材料形成"新旧交织"</p>
 <div class="foot">Page 15 · 图片展示</div>
@@ -324,9 +301,9 @@
 <div class="kicker mt-2">Gallery · 四大看点</div>
 <h2 class="h-xl">剧场 · 船坞 · 商业</h2>
 <div class="img-grid mt-3">
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_13.jpg" alt="艺术中心"><figcaption class="img-cap">1862时尚艺术中心</figcaption></figure>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_14.jpg" alt="商业空间"><figcaption class="img-cap">商业空间与工业对话</figcaption></figure>
-<figure class="frame-img lb-trigger" onclick="_lbOpen(this)""><img src="images/img_15.jpg" alt="滨江视角"><figcaption class="img-cap">向滨江打开的公共空间</figcaption></figure>
+<figure class="frame-img""><img src="images/img_13.jpg" alt="艺术中心"><figcaption class="img-cap">1862时尚艺术中心</figcaption></figure>
+<figure class="frame-img""><img src="images/img_14.jpg" alt="商业空间"><figcaption class="img-cap">商业空间与工业对话</figcaption></figure>
+<figure class="frame-img""><img src="images/img_15.jpg" alt="滨江视角"><figcaption class="img-cap">向滨江打开的公共空间</figcaption></figure>
 </div>
 <p class="note">原车间改造的800座剧场 · 保留的干船坞 · 各楼层室内设计如何与工业空间对话</p>
 <div class="foot">Page 16 · 更多空间</div>
@@ -389,28 +366,5 @@
   });
 })();
 </script>
-<div id="lb-overlay"><img id="lb-img" src="" alt=""></div>
-<div id="lb-close"></div>
-<div id="lb-caption"></div><script>
-(function(){
-  var o=document.getElementById('lb-overlay'),io=document.getElementById('lb-img'),
-      c=document.getElementById('lb-close'),ca=document.getElementById('lb-caption'),
-      op=false,sx=0,sy=0,mv=false;
-  window._lbOpen=function(el){
-    var i=el.querySelector('img');if(!i||!i.src)return;
-    io.src=i.src;io.alt=i.alt||'';ca.textContent=i.alt||'';
-    o.classList.add('open');op=true;document.body.style.overflow='hidden';
-  };
-  window._lbClose=function(){
-    o.classList.remove('open');op=false;document.body.style.overflow='';
-    setTimeout(function(){io.src='';ca.textContent=''},400);
-  };
-  function ft(el){while(el&&el!==document.body){if(el.classList&&el.classList.contains('lb-trigger'))return el;el=el.parentElement}return null}
-  document.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;mv=false},{passive:true});
-  document.addEventListener('touchmove',function(e){if(Math.abs(e.touches[0].clientX-sx)>10||Math.abs(e.touches[0].clientY-sy)>10)mv=true},{passive:true});
-  document.addEventListener('touchend',function(e){if(mv||op)return;var t=ft(e.target);if(t){e.preventDefault();window._lbOpen(t)}},{passive:false});
-  document.addEventListener('click',function(e){if(op){if(e.target===o||e.target===c||c.contains(e.target)){e.preventDefault();window._lbClose()}return}var t=ft(e.target);if(t){e.preventDefault();window._lbOpen(t)}},{passive:false});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&op)window._lbClose()});
-})();
-</script></body>
+</body>
 </html>
